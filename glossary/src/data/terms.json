@@ -1,0 +1,254 @@
+[
+  {
+    "id": "pdb",
+    "name": "Protein Data Bank",
+    "abbr": "PDB / .pdb file",
+    "category": "metrics",
+    "categoryName": "Metrics & Formats",
+    "definition": "The global public library storing 3D coordinates (X, Y, Z locations in space) for every atom in experimentally solved proteins.",
+    "details": "Example: PDB structure <code>1CX2</code> (COX-2 bound to Ibuprofen). A PDB file is a plain text file listing every atom's element type, residue number, and 3D physical position."
+  },
+  {
+    "id": "exp_methods",
+    "name": "Experimental Structure Methods",
+    "abbr": "X-ray / Cryo-EM / NMR",
+    "category": "metrics",
+    "categoryName": "Metrics & Formats",
+    "definition": "The 3 main laboratory techniques scientists use to take 3D pictures of real protein molecules.",
+    "details": "• <b>X-ray Crystallography:</b> Shoots X-rays through a crystallized protein to deduce atom positions from diffraction patterns.<br>• <b>Cryo-EM (Cryo-Electron Microscopy):</b> Instantly freezes proteins in liquid ethane and uses electron microscopes to take thousands of snapshots, combining them into a 3D picture.<br>• <b>NMR (Nuclear Magnetic Resonance):</b> Uses strong magnets (similar to an MRI scanner) to map atomic distances in liquid solutions."
+  },
+  {
+    "id": "angstrom",
+    "name": "Angstrom Unit",
+    "abbr": "Å (10⁻¹⁰ meters)",
+    "category": "metrics",
+    "categoryName": "Metrics & Formats",
+    "definition": "The standard unit of measurement used for atomic distances. 1 Å is 0.1 nanometers (roughly the width of a single hydrogen atom).",
+    "details": "Atoms are tiny: a single Carbon-to-Carbon bond is about 1.54 Å long, and a typical protein is between 30 Å and 100 Å wide."
+  },
+  {
+    "id": "backbone",
+    "name": "Protein Backbone & C-Alpha",
+    "abbr": "C-alpha (Cα)",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "The central repeating chain ('spine') that forms the main body of a protein.",
+    "details": "Every amino acid in a protein chain shares a repeating main chain of Nitrogen-Carbon-Carbon. The central Carbon atom in each amino acid is called the <b>C-alpha (Cα)</b> atom, which acts as the main reference anchor for that amino acid."
+  },
+  {
+    "id": "superposition",
+    "name": "Structural Superposition",
+    "abbr": "3D Alignment",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "Aligning and lining up two 3D protein structures in space so their matching parts overlap as closely as possible.",
+    "details": "By superposing (overlaying) a predicted protein model on top of a known experimental structure, you can visually and mathematically see where they match and where they differ."
+  },
+  {
+    "id": "rmsd",
+    "name": "Root-Mean-Square Deviation",
+    "abbr": "RMSD",
+    "category": "metrics",
+    "categoryName": "Metrics & Formats",
+    "definition": "The average distance error (in Angstroms) between equivalent atoms of two aligned protein structures.",
+    "details": "• <b>RMSD < 2.0 Å:</b> Excellent match (the two structures are practically identical).<br>• <b>RMSD > 5.0 Å:</b> Significant structural difference or different folding shape."
+  },
+  {
+    "id": "rmsf",
+    "name": "Root-Mean-Square Fluctuation",
+    "abbr": "RMSF",
+    "category": "metrics",
+    "categoryName": "Metrics & Formats",
+    "definition": "A measurement of how much each individual amino acid shifts or wiggles over time during a simulation.",
+    "details": "• <b>High RMSF peaks:</b> Flexible, loose loop regions swinging around in water.<br>• <b>Low RMSF valleys:</b> Rigid, stable core structural shapes like alpha-helices and beta-sheets."
+  },
+  {
+    "id": "secondary_structure",
+    "name": "Secondary Structures & Loops",
+    "abbr": "Helices / Sheets / Loops",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "The basic 3D structural shapes that protein chains fold into.",
+    "details": "• <b>Alpha-Helix:</b> A rigid, spiral corkscrew shape.<br>• <b>Beta-Sheet:</b> Flat, pleated ribbons lying side-by-side.<br>• <b>Loops:</b> Loose, flexible connecting strings that join helices and sheets together."
+  },
+  {
+    "id": "plddt",
+    "name": "Predicted Local Distance Difference Test",
+    "abbr": "pLDDT (0 - 100)",
+    "category": "metrics",
+    "categoryName": "Metrics & Formats",
+    "definition": "A confidence score from 0 to 100 produced by AI models (like AlphaFold and ESMFold) showing how sure the AI is about each part of the prediction.",
+    "details": "• <b>pLDDT > 90:</b> Very high confidence (reliable, highly accurate details).<br>• <b>pLDDT < 50:</b> Low confidence / Intrinsically Disordered (the protein section has no fixed, rigid shape naturally and behaves like floppy string)."
+  },
+  {
+    "id": "sasa",
+    "name": "Solvent-Accessible Surface Area",
+    "abbr": "SASA",
+    "category": "metrics",
+    "categoryName": "Metrics & Formats",
+    "definition": "The total outer surface area of a protein that liquid water molecules can physically touch.",
+    "details": "Calculated by imagining a small sphere (radius 1.4 Å, the size of a single water molecule) rolling all over the protein surface. If a protein unfolds during a simulation, its SASA increases dramatically as hidden inner parts become exposed."
+  },
+  {
+    "id": "cryo_density",
+    "name": "Cryo-EM Density Map",
+    "abbr": "3D Electron Cloud",
+    "category": "metrics",
+    "categoryName": "Metrics & Formats",
+    "definition": "A 3D image map of electron density captured by Cryo-EM microscopes.",
+    "details": "Think of it as a 3D mold or outline of the protein. Researchers trace atomic coordinates (PDB structures) inside this 3D electron mold to build a complete atomic model."
+  },
+  {
+    "id": "uniprot",
+    "name": "UniProt Knowledgebase",
+    "abbr": "UniProt ID",
+    "category": "software",
+    "categoryName": "Software & Tools",
+    "definition": "The world's central catalog of protein sequences and biological information.",
+    "details": "Every known protein has a unique UniProt Accession ID (for example, <code>P35354</code> for human Cyclooxygenase-2). It lists the full amino acid sequence, gene names, and known biological functions."
+  },
+  {
+    "id": "canonical_amino_acids",
+    "name": "Canonical Amino Acids",
+    "abbr": "20 Standard Amino Acids",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "The 20 standard building block molecules linked together in chains to make all natural proteins.",
+    "details": "Each amino acid is abbreviated with a single letter (A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y). The specific sequence of these 20 building blocks determines how the protein folds into 3D."
+  },
+  {
+    "id": "amino_acid_properties",
+    "name": "Amino Acid Properties",
+    "abbr": "Hydrophobic / Polar / Charged",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "The chemical behavior of the 20 amino acid building blocks.",
+    "details": "• <b>Hydrophobic (Water-fearing):</b> Oily residues that hide inside the protein core away from water.<br>• <b>Polar (Water-friendly):</b> Neutral residues that sit comfortably on the outer protein surface touching water.<br>• <b>Charged:</b> Positive (+) or negative (-) residues that attract opposite charges.<br>• <b>Aromatic:</b> Bulky ring-shaped residues that help lock the protein core together."
+  },
+  {
+    "id": "ligand_binding",
+    "name": "Ligand & Non-Covalent Binding",
+    "abbr": "Drug Binding / Non-Covalent",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "How a small molecule (like a drug) nestles into a protein's active binding pocket without forming a permanent chemical weld.",
+    "details": "<b>Non-covalent binding</b> means the drug sticks using gentle physical forces (like magnets or Velcro) such as hydrogen bonding and hydrophobic attraction, rather than forming a permanent chemical reaction."
+  },
+  {
+    "id": "hydrophobic_channel",
+    "name": "Hydrophobic Active Channel",
+    "abbr": "Catalytic Pocket",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "A greasy, oil-like pocket or tunnel inside a protein where specific small molecules fit and sit.",
+    "details": "Example: Ibuprofen (which is oil-like and hydrophobic) slides into the greasy active tunnel of the COX-2 enzyme, blocking the enzyme from producing pain signals."
+  },
+  {
+    "id": "msa",
+    "name": "Multiple Sequence Alignment",
+    "abbr": "MSA (MMseqs2)",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "Comparing a protein's amino acid sequence against thousands of related sequences from different species across evolution.",
+    "details": "By comparing how a protein evolved across thousands of organisms, AI models spot which positions never change across millions of years, signaling key structural features."
+  },
+  {
+    "id": "monomer_multimer",
+    "name": "Monomer vs. Multimer Complex",
+    "abbr": "Single vs Multi-Chain",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "Whether a protein works as a single individual chain or as a multi-piece machine assembly.",
+    "details": "• <b>Monomer:</b> A single protein chain working on its own.<br>• <b>Multimer / Complex:</b> Two or more protein chains locked together to work as a team."
+  },
+  {
+    "id": "solvation",
+    "name": "Solvation & Water Box",
+    "abbr": "Explicit Water Box",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "Surrounding a protein model with realistic water molecules and salt ions inside a virtual simulation box.",
+    "details": "In real life, proteins float in liquid water. Solvation places thousands of individual water molecules ($\text{H}_2\text{O}$) around the protein so its motions are physically realistic."
+  },
+  {
+    "id": "md_simulations",
+    "name": "Molecular Dynamics (MD) Simulations",
+    "abbr": "MD (OpenMM / GROMACS)",
+    "category": "software",
+    "categoryName": "Software & Tools",
+    "definition": "A physics simulation that calculates how atoms move, flex, and collide over time step-by-step.",
+    "details": "Using physics laws, MD simulations calculate the forces on every atom at tiny fractions of a second (femtoseconds) to record a 3D movie of the protein moving."
+  },
+  {
+    "id": "md_stages",
+    "name": "MD Simulation Steps",
+    "abbr": "Minimization / Equilibration / Production",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "The 3 standard stages of running a molecular dynamics simulation.",
+    "details": "1. <b>Energy Minimization:</b> Easing overlapping atoms apart so the simulation starts smoothly.<br>2. <b>Equilibration:</b> Gently heating the water box while holding the protein steady so liquid settles naturally.<br>3. <b>Production Run:</b> Releasing the system to record a 3D motion trajectory."
+  },
+  {
+    "id": "force_field_terms",
+    "name": "Force Field Terms & Energies",
+    "abbr": "Bonds / Dihedrals / Electrostatics",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "The mathematical formulas that calculate atomic push and pull forces during a simulation.",
+    "details": "• <b>Bond Stretching:</b> Springs keeping connected atoms at proper distance.<br>• <b>Angle Bending:</b> Springs controlling joint angles between 3 atoms.<br>• <b>Dihedrals:</b> Rotational forces along a chain of 4 atoms.<br>• <b>van der Waals & Electrostatics:</b> Short-range atomic collisions and long-range (+) and (-) electrical attractions."
+  },
+  {
+    "id": "force_fields",
+    "name": "Biomolecular Force Fields",
+    "abbr": "AMBER / CHARMM / OPLS",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "Carefully calibrated physical rulebooks containing all atomic weights, charges, and spring stiffness values.",
+    "details": "Examples include AMBER14SB and CHARMM36. They provide the physical formulas and numbers that OpenMM and GROMACS use to compute realistic atomic movements."
+  },
+  {
+    "id": "ensembles",
+    "name": "NVT & NPT Ensembles",
+    "abbr": "Simulation Conditions",
+    "category": "concept",
+    "categoryName": "Scientific Concepts",
+    "definition": "The environmental settings controlled during a simulation.",
+    "details": "• <b>NVT:</b> Constant Number of atoms, Volume (fixed box size), and Temperature (e.g. 300 Kelvin / room temp).<br>• <b>NPT:</b> Constant Number of atoms, Pressure (1 atmosphere), and Temperature (the box expands or contracts slightly to keep pressure steady)."
+  },
+  {
+    "id": "pymol",
+    "name": "PyMOL Visualizer",
+    "abbr": "PyMOL",
+    "category": "software",
+    "categoryName": "Software & Tools",
+    "definition": "A 3D visualization tool used to inspect molecular structures, measure Angstrom distances, and highlight active sites.",
+    "details": "Allows you to open PDB files, color specific amino acids, display electrostatic surfaces, and inspect drug binding."
+  },
+  {
+    "id": "chimerax",
+    "name": "UCSF ChimeraX",
+    "abbr": "ChimeraX",
+    "category": "software",
+    "categoryName": "Software & Tools",
+    "definition": "A 3D rendering program designed for publication-quality molecular images and Cryo-EM map visualization.",
+    "details": "Features lighting effects, ambient occlusion, and interactive 3D map fitting."
+  },
+  {
+    "id": "birefringence",
+    "name": "Birefringence & Polarized Microscopy",
+    "abbr": "Polarized Light",
+    "category": "wetlab",
+    "categoryName": "Wet-Lab Synergy",
+    "definition": "An optical property of ordered crystals that splits light, making real-world crystals glow in bright colors under polarized filters.",
+    "details": "Using your AmScope microscope and polarizing film filters, you can observe physical crystals forming on glass slides as glowing colored patterns against a dark background."
+  },
+  {
+    "id": "solubility_hypothesis",
+    "name": "Solubility & Micro-Crystallization Hypothesis",
+    "abbr": "Lab Bench Synergy",
+    "category": "wetlab",
+    "categoryName": "Wet-Lab Synergy",
+    "definition": "Formulating hypotheses about whether a molecule will dissolve or crystallize in liquid, then verifying on physical microscope slides.",
+    "details": "You can model molecular solubility in software simulations, then mix real solutions on glass slides to observe actual crystal growth under your microscope."
+  }
+]

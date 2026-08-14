@@ -1,0 +1,164 @@
+[
+  {
+    "id": "micromamba_activate",
+    "name": "Activate Micromamba Environment",
+    "command": "micromamba activate compbio",
+    "category": "environment",
+    "categoryName": "Environment & Package Commands",
+    "description": "Activates the isolated Python 3.11 compbio environment containing all computational biology tools.",
+    "example": "micromamba activate compbio"
+  },
+  {
+    "id": "micromamba_install",
+    "name": "Install Conda-Forge Package",
+    "command": "micromamba install -c conda-forge <package-name>",
+    "category": "environment",
+    "categoryName": "Environment & Package Commands",
+    "description": "Installs a pre-compiled binary package from the conda-forge repository into the active environment.",
+    "example": "micromamba install -c conda-forge openmm"
+  },
+  {
+    "id": "fetch_pdb",
+    "name": "Fetch PDB Structure File",
+    "command": "curl -s https://files.rcsb.org/download/<PDB-ID>.pdb -o <PDB-ID>.pdb",
+    "category": "system",
+    "categoryName": "System & PDB Tools",
+    "description": "Downloads 3D Cartesian coordinate PDB file directly from the RCSB Protein Data Bank.",
+    "example": "curl -s https://files.rcsb.org/download/1CX2.pdb -o 1cx2.pdb"
+  },
+  {
+    "id": "pymol_open",
+    "name": "Launch PyMOL with Structure",
+    "command": "pymol <filename.pdb>",
+    "category": "pymol",
+    "categoryName": "PyMOL Commands",
+    "description": "Launches the PyMOL 3D viewport and automatically loads the target PDB structure file.",
+    "example": "pymol 1cx2.pdb"
+  },
+  {
+    "id": "pymol_select_resi",
+    "name": "PyMOL: Select Specific Residues",
+    "command": "select <selection_name>, resi <residue_numbers>",
+    "category": "pymol",
+    "categoryName": "PyMOL Commands",
+    "description": "Creates a named selection set containing specific residue numbers in the protein chain.",
+    "example": "select active_site, resi 120+355"
+  },
+  {
+    "id": "pymol_distance",
+    "name": "PyMOL: Measure Inter-Atomic Distance",
+    "command": "distance <dist_name>, <selection_1>, <selection_2>",
+    "category": "pymol",
+    "categoryName": "PyMOL Commands",
+    "description": "Calculates and draws a distance line in Angstroms (Å) between two atoms or residue selections.",
+    "example": "distance hbond1, resi 120 and name NH1, resi 600 and name O1"
+  },
+  {
+    "id": "pymol_surface",
+    "name": "PyMOL: Render Molecular Surface",
+    "command": "show surface, <selection_or_all>",
+    "category": "pymol",
+    "categoryName": "PyMOL Commands",
+    "description": "Displays the 3D solvent-excluded molecular surface of the protein or active site.",
+    "example": "show surface, all"
+  },
+  {
+    "id": "pymol_electrostatics",
+    "name": "PyMOL: Surface Vacuum Electrostatics",
+    "command": "action -> generate -> vacuum electrostatics -> protein contact potential",
+    "category": "pymol",
+    "categoryName": "PyMOL Commands",
+    "description": "Colors the protein surface by positive (blue) and negative (red) electrostatic charge distribution.",
+    "example": "run via PyMOL GUI Action Menu or plugin APBS"
+  },
+  {
+    "id": "chimerax_open",
+    "name": "Launch ChimeraX with Structure",
+    "command": "chimerax <filename.pdb>",
+    "category": "chimerax",
+    "categoryName": "ChimeraX Commands",
+    "description": "Launches UCSF ChimeraX and loads the specified molecular structure in 3D mode.",
+    "example": "chimerax 1cx2.pdb"
+  },
+  {
+    "id": "chimerax_fetch",
+    "name": "ChimeraX: Fetch Direct from PDB",
+    "command": "open <PDB-ID>",
+    "category": "chimerax",
+    "categoryName": "ChimeraX Commands",
+    "description": "Fetches and opens a structure directly from RCSB inside ChimeraX command line.",
+    "example": "open 1cx2"
+  },
+  {
+    "id": "chimerax_color_target",
+    "name": "ChimeraX: Color Specific Chain or Residues",
+    "command": "color :<residue_number> <color_name>",
+    "category": "chimerax",
+    "categoryName": "ChimeraX Commands",
+    "description": "Applies targeted color to specific residues or chains in the viewport.",
+    "example": "color :120,355 cyan"
+  },
+  {
+    "id": "openmm_test",
+    "name": "OpenMM: Test CUDA Installation",
+    "command": "python -m openmm.testInstallation",
+    "category": "openmm",
+    "categoryName": "OpenMM Commands",
+    "description": "Verifies that OpenMM detects your RTX 5070 GPU CUDA and OpenCL execution platforms.",
+    "example": "python -m openmm.testInstallation"
+  },
+  {
+    "id": "pytorch_cuda_check",
+    "name": "PyTorch: Check CUDA GPU Availability",
+    "command": "python -c \"import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))\"",
+    "category": "python",
+    "categoryName": "Python & Analytics",
+    "description": "Verifies PyTorch is compiled with CUDA support and correctly identifies the RTX 5070.",
+    "example": "python -c \"import torch; print(torch.cuda.is_available())\""
+  },
+  {
+    "id": "esmfold_cli",
+    "name": "ESMFold: Predict Structure from FASTA",
+    "command": "esm-fold -i <input.fasta> -o <output_directory>",
+    "category": "prediction",
+    "categoryName": "Prediction Tools",
+    "description": "Executes single-sequence ESMFold transformer model on GPU to predict 3D PDB structure.",
+    "example": "esm-fold -i sequence.fasta -o output_pdb/"
+  },
+  {
+    "id": "colabfold_cli",
+    "name": "ColabFold: Run Local Prediction",
+    "command": "colabfold_batch <input_fasta_or_dir> <output_dir>",
+    "category": "prediction",
+    "categoryName": "Prediction Tools",
+    "description": "Executes MMseqs2 alignment + AlphaFold prediction locally with GPU acceleration.",
+    "example": "colabfold_batch input.fasta ./colabfold_output"
+  },
+  {
+    "id": "gromacs_version",
+    "name": "GROMACS: Check Version & CUDA Support",
+    "command": "gmx --version",
+    "category": "gromacs",
+    "categoryName": "GROMACS Commands",
+    "description": "Displays GROMACS build metadata, GPU acceleration status, and SIMD instruction sets.",
+    "example": "gmx --version"
+  },
+  {
+    "id": "gromacs_pdb2gmx",
+    "name": "GROMACS: Generate Topology from PDB",
+    "command": "gmx pdb2gmx -f <input.pdb> -o <processed.gro> -p <topol.top> -ff amber99sb-ildn -water tip3p",
+    "category": "gromacs",
+    "categoryName": "GROMACS Commands",
+    "description": "Converts PDB file into GROMACS coordinate structure (.gro) and molecular topology (.top).",
+    "example": "gmx pdb2gmx -f 1cx2.pdb -o protein.gro -p topol.top -ff amber99sb-ildn -water tip3p"
+  },
+  {
+    "id": "gromacs_solvate",
+    "name": "GROMACS: Solvate Protein Box",
+    "command": "gmx solvate -cp <box.gro> -cs spc216.gro -o <solvated.gro> -p <topol.top>",
+    "category": "gromacs",
+    "categoryName": "GROMACS Commands",
+    "description": "Fills periodic simulation box with explicit water molecules (TIP3P/SPC).",
+    "example": "gmx solvate -cp box.gro -cs spc216.gro -o solvated.gro -p topol.top"
+  }
+]
