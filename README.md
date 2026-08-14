@@ -79,6 +79,9 @@ npm install
 
 # 3. Start local development server
 npm run dev
+
+# 4. Build site for production (outputs to glossary/docs)
+npm run build
 ```
 
 Once `npm run dev` is executed, the terminal will launch the Vite development server. Open the provided local server link (typically `http://localhost:5173`) in your web browser to explore both the Glossary and Command Cheatsheet.
